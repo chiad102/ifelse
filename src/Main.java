@@ -61,13 +61,13 @@ public class Main {
         int busySittingPlace = 34;
         int busyStandingPlace = 42;
         if ((sittingPlace > busySittingPlace) && (standingPlace > busyStandingPlace)) {
-            System.out.println("В вагоне есть свободные сидячие и стоячие места.");
+            System.out.println("В вагоне есть свободные сидячие и стоячие места." + (sittingPlace -busySittingPlace) + " сидячих места и " + (standingPlace - busyStandingPlace) + " стоячих.");
         } else {
             if ((sittingPlace > busySittingPlace) && (standingPlace == busyStandingPlace)) {
-                System.out.println("В вагоне остались только сидячие места.");
+                System.out.println("В вагоне остались только " + (sittingPlace - busySittingPlace) + " сидячиx мест.");
             } else {
                 if ((sittingPlace == busySittingPlace) && (standingPlace > busyStandingPlace)) {
-                    System.out.println("В вагоне остались только стоячие места.");
+                    System.out.println("В вагоне остались только " + (standingPlace - busySittingPlace) + " стоячих мест.");
                 } else {
                     System.out.println("В вагоне нет мест!");
                 }
